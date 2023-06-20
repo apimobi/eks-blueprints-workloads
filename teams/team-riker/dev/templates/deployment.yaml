@@ -6,7 +6,7 @@ metadata:
     app: guestbook-ui
     {{- toYaml .Values.labels | nindent 4 }}
 spec:
-  replicas: 1
+  replicas: 20
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -23,8 +23,8 @@ spec:
           - containerPort: 80
         resources:
           requests:
-            memory: '50Mi'
-            cpu: '50m'
+            memory: '34Mi'
+            cpu: '10m'
           limits:
             memory: '50Mi'
             cpu: '50m'
